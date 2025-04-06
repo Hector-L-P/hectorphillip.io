@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <title>La Cocina Venezolana - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html">  
+                <img src="images/logo/la_cocina_venezolana.png" alt="LA_COCINA_VENEZOLANA" class="logo">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <img src="images/icons/xmark.svg" onclick="hideMenu()" alt="Close Menu" id="closeMenu" class="icon">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+                
+            </div>
+        <img src="images/icons/bars-solid.svg" onclick="showMenu()" alt="Open Menu" id="openMenu" class="icon">
+         </nav>
+         <h1>About Us</h1>
+    </section>
+
+    <!-- About Us Content -->
+     <section class="about-section">
+        <div class="row">
+            <div class="about-col">
+                <h1>About La Cocina Venezolana</h1>
+                <p>At La Cocina Venezolana, we bring the authentic taste of Venezuela to your table with every bite. Our mission is to offer high-quality, delicious Venezuelan food that is prepared with love, passion, and traditional recipes passed down through generations.</p>
+                <h1>Our History</h1>
+                <p>Founded by a group of food enthusiasts, La Cocina Venezolana began as a small family-owned venture with a deep love for Venezuela’s rich culinary culture. We started with a single goal, to bring the best of Venezuela’s flavors to the world, blending traditional dishes like empanadas, arepas, and delicious baked goods with a modern twist.</p>
+                <p>Opening our doors, we've grown into a brand loved by many, offering an array of delightful treats that evoke the warmth and hospitality of Venezuela.</p> 
+                <p>From our humble beginnings in Trinidad and Tobago, we have expanded our offerings to include a variety of baked goods, savory dishes, and even a few surprises to satisfy your cravings. Every dish is carefully crafted, using the finest ingredients, and prepared fresh to ensure that you always get the best experience.</p>            </div>
+            <div class="about-col">
+                <img src="images/background/vecteezy_venezuela-map-with-flag_.jpg" alt="Venezuela map with flag">
+            </div>
+        </div>
+     </section>
+
+     <section id="team" class="team-section">
+        <h2>Meet the Team</h2>
+        <p>We are proud of our dedicated team who make every meal special. From passionate chefs to friendly customer service staff, each member plays an important role in ensuring your experience with La Cocina Venezolana is nothing short of extraordinary.</p>
+        <div class="team-cards">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <img src="images/team/hector.jpg" alt="Hector Luis Phillip" class="team-member-img">
+                <div class="team-card-body">
+                    <h3>Hector Phillip</h3>
+                    <p class="role">Founder & Head Chef</p>
+                    <p>With a love for cooking rooted in his Venezuelan heritage, Hector is the driving force behind La Cocina Venezolana. He believes that food is a powerful way to share culture, and through his creations, he aims to showcase the heart and soul of Venezuelan cuisine.</p>
+                </div>
+            </div>
+    
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <img src="images/team/lyschelle.jpg" alt="Lyschelle Rodrigues" class="team-member-img">
+                <div class="team-card-body">
+                    <h3>Lyschelle Rodrigues</h3>
+                    <p class="role">Operations Manager</p>
+                    <p>Lyschelle ensures that everything runs smoothly behind the scenes. With her attention to detail and commitment to customer satisfaction, she works hard to make sure every order is perfect.</p>
+                </div>
+            </div>
+    
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <img src="images/team/kearra.jpg" alt="Kearra Joseph" class="team-member-img">
+                <div class="team-card-body">
+                    <h3>Kearra Joseph</h3>
+                    <p class="role">Customer Relations & Marketing Coordinator</p>
+                    <p>Kearra is our go-to for all things customer service. She’s always eager to listen to feedback and strives to create an unforgettable experience for our customers. Her enthusiasm for promoting Venezuelan culture shines through in her marketing efforts.</p>
+                </div>
+            </div>
+    
+            <!-- Team Member 4 -->
+            <div class="team-card">
+                <img src="images/team/shanese.jpg" alt="Shanese Thompson" class="team-member-img">
+                <div class="team-card-body">
+                    <h3>Shanese Thompson</h3>
+                    <p class="role">Baking Specialist</p>
+                    <p>Shanese is the baker behind some of our most beloved treats, from our signature chocolate chunk cookies to our decadent cinnamon rolls. Her passion for baking ensures that every product is made with love and attention to detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+    <!-- Footer -->
+<section class="footer">
+    <h3>La Cocina Venezolana</h3>  
+    <p>Authentic Venezuelan flavours, baked with love.</p>
+    <div class="icons">
+        <a href="#"><img src="images/icons/facebook-brands.svg" alt="Facebook"></a>
+        <a href="#"><img src="images/icons/instagram-brands.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/icons/x-twitter-brands.svg" alt="Twitter"></a>
+    </div>
+
+     <!-- W3C Validation Badges -->
+     <div class="validation-badges">
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
+        </a>
+    </div>
+    
+    <p>Made By Hector <img src="images/icons/heart-regular.svg" class="heart-icon" alt="Heart"></p>
+    <p>&copy; 2025 La Cocina Venezolana. All Rights Reserved.</p>
+</section>
+
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("nav-links");
+    
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+    
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

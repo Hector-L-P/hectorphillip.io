@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cocina Venezolana - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <script>
+        function validateForm() {
+            const name = document.forms["signupForm"]["name"].value.trim();
+            const email = document.forms["signupForm"]["email"].value.trim();
+            const message = document.forms["signupForm"]["message"].value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html">  
+                <img src="images/logo/la_cocina_venezolana.png" alt="LA_COCINA_VENEZOLANA" class="logo">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <img src="images/icons/xmark.svg" onclick="hideMenu()" alt="Close Menu" id="closeMenu" class="icon">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <img src="images/icons/bars-solid.svg" onclick="showMenu()" alt="Open Menu" id="openMenu" class="icon">        
+        </nav>
+        <h1>Sign Up</h1>
+    </section>
+
+    <section class="form-section">
+        <div class="form-container">
+            <div class="form-col">
+                <h1>Leave A Comment</h1>
+                <form name="signupForm" onsubmit="return validateForm()" >
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <input type="text" name="email" placeholder="Enter Your Email Address" required>
+                    <input type="text" name="subject" placeholder="Enter Your Subject" required>
+                    <textarea name="message" rows="8" placeholder="Message" required></textarea>
+                    <div class="button-container">
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="image-col">
+                <img src="images/background/feedback.jpg" alt="Feedback Image" class="form-image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <section class="footer">
+        <h3>La Cocina Venezolana</h3>  
+        <p>Authentic Venezuelan flavours, baked with love.</p>
+        <div class="icons">
+            <a href="#"><img src="images/icons/facebook-brands.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/icons/instagram-brands.svg" alt="Instagram"></a>
+            <a href="#"><img src="images/icons/x-twitter-brands.svg" alt="Twitter"></a>
+        </div>
+
+         <!-- W3C Validation Badges -->
+    <div class="validation-badges">
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS">
+        </a>
+    </div>
+
+        <p>Made By Hector <img src="images/icons/heart-regular.svg" class="heart-icon" alt="Heart"></p>
+        <p>&copy; 2025 La Cocina Venezolana. All Rights Reserved.</p>
+    </section>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("nav-links");
+    
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+    
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

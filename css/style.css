@@ -1,0 +1,680 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    cursor: pointer;  
+    transition: transform 0.3s ease-in-out;  
+}
+
+.logo:hover {
+    transform: scale(1.05); 
+}
+
+.sub-header {
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-image: url('../images/background/orangebg.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #F8F5F2;
+    padding: 0;  /* Ensure no extra padding */
+}
+
+.sub-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px; 
+    font-weight: 800;
+    margin-top: -80px; 
+    color:black; 
+}
+
+nav {
+    display: flex;
+    padding: 0 6%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: -40px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+    position: relative;
+}
+
+nav img {
+    width: 300px;
+}
+
+.nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0033A0;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Set the height to fill the viewport */
+    overflow: hidden; /* Ensure the video doesn't overflow */
+}
+
+#header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the whole container */
+    z-index: -1; /* Ensure the video stays in the background */
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 60vh; /* Reduce height on smaller screens */
+    }
+
+    #header-video {
+        height: auto; /* Let the height adjust automatically */
+        object-position: center; /* Ensure the video stays centered */
+    }
+}
+
+.welcome-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px; /* Adjust as needed */
+    font-weight: 800;
+    color: black; /* Venezuelan Blue */
+    text-align: center;
+    margin-top: 80px; /* Space between nav and heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.text-box {
+    text-align: center;
+    padding: 5px 20px;
+    background-color: #FCE300;
+}
+.text-box h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+}
+.text-box p {
+    font-size: 30px;
+}
+
+@media (max-width: 1024px) {
+    .text-box h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-box h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-box h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 420px) {
+    .text-box h1 {
+        font-size: 22px;
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #D32F2F;
+    color: white;
+    padding: 15px 30px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.cta-button:hover {
+    border: 1px solid #FFD700;
+    background: #0033A0;
+    transition: 0.5s;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+nav .icon{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #FFD700;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    
+    nav .icon{
+        display: block;
+        color: #0033A0;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+
+
+
+.products-preview {
+    padding: 20px 20px;
+    text-align: center;
+}
+.products-preview h2 {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+}
+.top-pick-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    align-items: center;
+}
+.top-pick-item {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    transition: 0.5s;
+    margin: 0 5px;
+}
+.top-pick-item img {
+    width: 100%;
+    height: 300px;
+}
+.top-pick-item h3 {
+    font-size: 28px;
+    padding: 10px;
+}
+
+.top-pick-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 0px #D32F2F;
+}
+
+.products-preview h2, .Testimonials h2{
+    color: #0033A0;
+}
+
+/*----- Testimonials -----*/
+.Testimonials {
+    padding: 40px 20px;
+    text-align: center;
+}
+.Testimonials h2 {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Testimonials-item p {
+    margin-top: 0;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-family: 'Lora', serif;
+    line-height: 1.4;
+}
+
+.Testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.Testimonials-item {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.5s;
+    transition: transform 0.3s ease-in-out;
+}
+.Testimonials-item img {
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+}
+.Testimonials-item h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+    color: #0033A0;
+}
+
+.Testimonials-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 0px #D32F2F;
+    cursor: pointer;
+}
+
+/*----- Call To Action -----*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: url('../images/background/contactus.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+} 
+
+.cta-button red-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #D32F2F;
+    color: white;
+    padding: 15px 30px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.cta h1{
+    color: black;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----- Footer -----*/
+.footer {
+    width: 100%;
+    background-color: #F8F5F2;
+    text-align: center;
+    padding: 20px 0; 
+    font-size: 15px; 
+}
+
+
+.footer h3 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+.footer p{
+    margin: 2px 0;
+    line-height: 1.1;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: black;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 2px 0;
+}
+
+.footer .icons img{
+    width: 20px;
+    height: 20px;
+}
+
+.heart-icon{
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/*----- Menu Page -----*/
+
+.page-title {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background-color: #F8F5F2; /* soft background */
+    color: #0033A0; /* Venezuelan Blue */
+}
+
+.page-title h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px; /* adjust as needed */
+    font-weight: 800;
+    margin: 0;
+}
+
+.menu-section {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    color: #0033A0;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+}
+    
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+    transition: 0.5s;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    border-radius: 8px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    margin-top: 12px;
+    color: black;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 0px #D32F2F;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+}
+
+
+/*----- About Us Page -----*/
+
+
+.about-section{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img{
+    width: 100%;
+}
+
+.about-col h1{
+    color: #0033A0;
+}
+.team-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #0033A0; /* Venezuelan Blue */
+}
+
+/* Styling the Cards */
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+    box-shadow: 0 0 20px 0px #D32F2F;
+    transform: translateY(-10px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Image inside the Card */
+.team-member-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #FCE300; 
+}
+
+/* Card Body */
+.team-card-body {
+    padding: 20px;
+}
+
+.team-card-body h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0033A0; /* Venezuelan Blue */
+}
+
+.team-card-body .role {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #D32F2F; /* Venezuelan Red */
+}
+
+.team-card-body p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/*----- Contact Us Page -----*/
+.location{
+    width: 80%;
+    margin: 80px;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.location iframe{
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.location iframe:hover{
+    box-shadow: 0 0 20px 0px #D32F2F;
+    transform: translateY(-10px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.contact-info{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-details{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-details div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.location , .contact-info h1{
+    color: #0033A0;
+}
+
+/* General Styles for the Team Section */
+.team-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/*----- Sign Up Page -----*/
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.form-col {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-col h1{
+    color: #0033A0;
+}
+
+.form-section {
+    padding: 4rem 2rem;
+    background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.image-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+.form-col input, .form-col textarea{
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid  #0033A0;
+}
